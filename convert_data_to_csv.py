@@ -9,13 +9,22 @@ import pandas as pd
 from utils import functions as f
 
 
+# _DATASETS = {
+#     # pretraining datasets
+#     'g12c': '../../input/georgia-12lead-ecg-challenge-database/Georgia',
+#     'chapman-shaoxing-ningbo': '../../input/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv',
+#     # downstreaming datasets
+#     'ptbxl': '../../input/ptbxl-electrocardiography-database/WFDB',
+#     'cpsc2018': '../../input/china-physiological-signal-challenge-in-2018/Training_WFDB',
+# }
+
 _DATASETS = {
     # pretraining datasets
-    'g12c': '../../input/georgia-12lead-ecg-challenge-database/Georgia',
-    'chapman-shaoxing-ningbo': '../../input/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv',
+    'g12c': './data/georgia-12lead-ecg-challenge-database/Georgia',
+    'chapman-shaoxing-ningbo': './data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv',
     # downstreaming datasets
-    'ptbxl': '../../input/ptbxl-electrocardiography-database/WFDB',
-    'cpsc2018': '../../input/china-physiological-signal-challenge-in-2018/Training_WFDB',
+    'ptbxl': './data/ptbxl-electrocardiography-database/WFDB',
+    'cpsc2018': './data/china-physiological-signal-challenge-in-2018/Training_WFDB',
 }
 
 def get_parser():

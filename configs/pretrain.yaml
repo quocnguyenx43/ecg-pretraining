@@ -1,7 +1,7 @@
 seed: 42
 output_dir: ./outputs/
 exp_name: pretrain_1
-resume: ./outputs/pretrain_1/models/checkpoint-2.pth # provide a checkpoint path
+resume: null # provide a checkpoint path
 device: cpu
 
 model:
