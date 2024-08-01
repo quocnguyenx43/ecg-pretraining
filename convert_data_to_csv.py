@@ -11,11 +11,11 @@ from utils import functions as f
 
 _DATASETS = {
     # pretraining datasets
-    'g12c': '/kaggle/input/georgia-12lead-ecg-challenge-database/Georgia',
-    'chapman-shaoxing-ningbo': '/kaggle/input/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv',
+    'g12c': '../../input/georgia-12lead-ecg-challenge-database/Georgia',
+    'chapman-shaoxing-ningbo': '../../input/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv',
     # downstreaming datasets
-    'ptbxl': '/kaggle/input/ptbxl-electrocardiography-database/WFDB',
-    'cpsc2018': '/kaggle/input/china-physiological-signal-challenge-in-2018/Training_WFDB',
+    'ptbxl': '../../input/ptbxl-electrocardiography-database/WFDB',
+    'cpsc2018': '../../input/china-physiological-signal-challenge-in-2018/Training_WFDB',
 }
 
 def get_parser():
