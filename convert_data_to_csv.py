@@ -52,6 +52,8 @@ def process(args):
     index_df.to_csv(args['output_dir_path'], index=False)
 
 if __name__ == "__main__":
+    print('Processing ...')
     process(get_parser())
+    print('Done!')
 
 # python convert_data_to_csv.py --input_datasets "g12c,chapman-shaoxing-ningbo" --output_dir_path "./data/index.csv"
