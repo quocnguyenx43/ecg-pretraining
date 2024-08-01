@@ -88,6 +88,7 @@ def main(config) -> None:
     
     # Training
     print(f"Start training for {total_epochs} epochs")
+    print(device)
     for epoch in range(start_epoch, end_epoch):
         # train 1 epoch
         train_stats = train_one_epoch_pretrain(
