@@ -32,7 +32,6 @@ def train_one_epoch_pretrain(
         # we use a per iteration (instead of per epoch) lr scheduler
         if step % accum_iter == 0:
             adjust_learning_rate(optimizer, step / len(data_loader) + epoch, end_epoch, config)
-            print('Adjusted learning rate!')
 
         input_ecg = batch['input_ecg'].type(torch.FloatTensor)
         lead_indices = batch['lead_indices'].type(torch.IntTensor)
