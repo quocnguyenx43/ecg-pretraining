@@ -84,6 +84,7 @@ def main(config) -> None:
         end_epoch = total_epochs
 
     model = model.to(device)
+    loss_scaler = loss_scaler.to(device)
     
     # Training
     print(f"Start training for {total_epochs} epochs")
