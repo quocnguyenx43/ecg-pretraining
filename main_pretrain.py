@@ -82,6 +82,8 @@ def main(config) -> None:
     else:
         start_epoch = 0
         end_epoch = total_epochs
+
+    model = model.to(device)
     
     # Training
     print(f"Start training for {total_epochs} epochs")
