@@ -65,7 +65,7 @@ def main(config) -> None:
 
     # Model
     model = model_test(**config['model'])
-    model.to(device)
+    model = model.to(device)
     optimizer = o.get_optimizer(config['train'], model)
     loss_scaler = NativeScaler()
         
@@ -77,13 +77,13 @@ def main(config) -> None:
             model, last_checkpoint_path,
             optimizer, loss_scaler
         )
+        model = model.to(device)
         start_epoch = last_epoch + 1
         end_epoch = start_epoch + total_epochs
     else:
         start_epoch = 0
         end_epoch = total_epochs
 
-    model.to(device)
     loss_scaler = loss_scaler
     
     # Training
