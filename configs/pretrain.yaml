@@ -2,7 +2,7 @@ seed: 42
 output_dir: ./outputs/
 exp_name: pretrain_1
 resume: null # provide a checkpoint path
-device: cpu
+device: cuda
 
 model:
   seq_len: 2250
@@ -12,7 +12,7 @@ model:
   norm_pix_loss: true
 
 dataset:
-  train_csv: ./data/index.csv
+  train_csv: ./data/pretraining_index.csv
   
   # cols
   path_col: path
@@ -41,7 +41,7 @@ dataloader:
   pin_memory: True
 
 train:
-  total_epochs: 3
+  total_epochs: 10
   accum_iter: 1
   warmup_epochs: 3
   min_lr: 0
