@@ -39,6 +39,7 @@ def main(config) -> None:
     # Configs
     print(yaml.dump(config, default_flow_style=False, sort_keys=False))
     device = torch.device(config['device'])
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     f.setup_seed(config['seed'])
 
@@ -65,7 +66,7 @@ def main(config) -> None:
 
     # Model
     model = model_test(**config['model'])
-    model = model.to(device)
+    model.to(device)
     optimizer = o.get_optimizer(config['train'], model)
     loss_scaler = NativeScaler()
         
@@ -77,7 +78,7 @@ def main(config) -> None:
             model, last_checkpoint_path,
             optimizer, loss_scaler
         )
-        model = model.to(device)
+        model.to(device)
         start_epoch = last_epoch + 1
         end_epoch = start_epoch + total_epochs
     else:
