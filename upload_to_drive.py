@@ -5,11 +5,9 @@ from googleapiclient.http import MediaFileUpload
 import os
 import argparse as arg
 
-
-def authenticate():
+def authenticate(service_account_file):
     SCOPES = ['https://www.googleapis.com/auth/drive']
-    SERVICE_ACCOUNT_FILE = './service_account.json'
-    creds = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+    creds = service_account.Credentials.from_service_account_file(service_account_file, scopes=SCOPES)
     return creds
 
 def get_file_id_by_name(file_name, service, folder_id):
@@ -18,16 +16,16 @@ def get_file_id_by_name(file_name, service, folder_id):
     files = results.get('files', [])
     return files[0]['id'] if files else None
 
-def upload_file(local_file_path, dest_file_name):
-    PARENT_FOLDER_ID = '1cl11_T-lL9rBxwclgdRtXYBX6ciHZpH7'
-    creds = authenticate()
+def upload_file(service_account_file, folder_id, file_path):
+    PARENT_FOLDER_ID = folder_id
+    creds = authenticate(service_account_file)
     service = build('drive', 'v3', credentials=creds)
 
     # Check if the file already exists in Google Drive
-    existing_file_id = get_file_id_by_name(dest_file_name, service, PARENT_FOLDER_ID)
+    existing_file_id = get_file_id_by_name(file_path, service, PARENT_FOLDER_ID)
     if existing_file_id:
         # If the file exists, update its content
-        media = MediaFileUpload(local_file_path, resumable=True)
+        media = MediaFileUpload(file_path, resumable=True)
         file = service.files().update(
             fileId=existing_file_id,
             media_body=media,
@@ -37,10 +35,10 @@ def upload_file(local_file_path, dest_file_name):
     else:
         # If the file doesn't exist, create a new file
         file_metadata = {
-            'name': dest_file_name,
+            'name': file_path,
             'parents': [PARENT_FOLDER_ID]
         }
-        media = MediaFileUpload(local_file_path, resumable=True)
+        media = MediaFileUpload(file_path, resumable=True)
         file = service.files().create(
             body=file_metadata,
             media_body=media,
@@ -50,17 +48,16 @@ def upload_file(local_file_path, dest_file_name):
         return file_id
     
 parser = arg.ArgumentParser(description="Params")
-parser.add_argument("--folder_name", type=str)
+parser.add_argument("--service_account_file", type=str)
 parser.add_argument("--folder_id", type=str)
+parser.add_argument("--file", type=str)
 args = parser.parse_args()
 args = vars(args)
-folder_name = args['folder_name']
-folder_id = args['folder_id']
-file_list = os.listdir(folder_name)
 
-for file in file_list:
-    path = folder_name + '/' + file
-    print('path_file: ', path)
-    upload_file(path, path)
+service_account_file = args['service_account_file']
+folder_id = args['folder_id']
+file = args['file']
+
+upload_file(service_account_file, folder_id, file)
     
-# python upload_file_to_drive.py --folder_name "outputs" --folder_id "1cl11_T-lL9rBxwclgdRtXYBX6ciHZpH7"
+# python upload_file_to_drive.py --service_account_file "F://projects//ViReCAX/service_account.json" --folder_id "1H6GRQN3oQ4n2FmTrelQXbfV-wAEreMNM" --file "run_evaluation_cls_task.py"
