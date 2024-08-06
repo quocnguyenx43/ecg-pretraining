@@ -6,7 +6,6 @@ models/__pycache__/
 *$py.class
 
 outputs/
-data/
 
 # C extensions
 *.so
