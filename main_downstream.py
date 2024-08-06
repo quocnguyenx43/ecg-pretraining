@@ -18,13 +18,13 @@ from utils import misc as m
 
 from utils.misc import NativeScalerWithGradNormCount as NativeScaler
 from models.model import model_test
-from utils.engine import train_one_epoch_pretrain
+from utils.engine import train_one_epoch_downstream
 
 
 
 def parse() -> dict:
-    parser = argparse.ArgumentParser('ECG pre-training args')
-    parser.add_argument('--config_path', default='./configs/pretrain.yaml', type=str, help='YAML config file path for pretraining')
+    parser = argparse.ArgumentParser('ECG downstream args')
+    parser.add_argument('--config_path', default='./configs/downstream.yaml', type=str)
 
     args = parser.parse_args()
     with open(args.config_path, 'r') as f:

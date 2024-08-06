@@ -22,9 +22,6 @@ def train_one_epoch_pretrain(
     metric_logger.add_meter('lr', m.SmoothedValue(window_size=1, fmt='{value:.6f}'))
     print_header = 'Epoch: [{}]'.format(epoch)
     print_freq = 20
-    
-    if log_writer is not None:
-        print('log_dir: {}'.format(log_writer.log_dir))
 
     accum_iter = config['accum_iter']
 
@@ -64,6 +61,5 @@ def train_one_epoch_pretrain(
             log_writer.add_scalar('pretrain_loss', loss_value, epoch_1000x)
             log_writer.add_scalar('lr', lr, epoch_1000x)
 
-    # gather the stats from all processes
     print('Averaged stats:', metric_logger)
     return {k: meter.global_avg for k, meter in metric_logger.meters.items()}

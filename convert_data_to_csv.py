@@ -9,23 +9,23 @@ import pandas as pd
 from utils import functions as f
 
 
-_DATASETS = {
-    # pretraining datasets
-    'g12c': '../../input/georgia-12lead-ecg-challenge-database/Georgia',
-    'chapman-shaoxing-ningbo': '../../input/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv',
-    # downstreaming datasets
-    'ptbxl': '../../input/ptbxl-electrocardiography-database/WFDB',
-    'cpsc2018': '../../input/china-physiological-signal-challenge-in-2018/Training_WFDB',
-}
-
 # _DATASETS = {
 #     # pretraining datasets
-#     'g12c': './data/georgia-12lead-ecg-challenge-database/Georgia',
-#     'chapman-shaoxing-ningbo': './data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv',
+#     'g12c': '../../input/georgia-12lead-ecg-challenge-database/Georgia',
+#     'chapman-shaoxing-ningbo': '../../input/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv',
 #     # downstreaming datasets
-#     'ptbxl': './data/ptbxl-electrocardiography-database/WFDB',
-#     'cpsc2018': './data/china-physiological-signal-challenge-in-2018/Training_WFDB',
+#     'ptbxl': '../../input/ptbxl-electrocardiography-database/WFDB',
+#     'cpsc2018': '../../input/china-physiological-signal-challenge-in-2018/Training_WFDB',
 # }
+
+_DATASETS = {
+    # pretraining datasets
+    'g12c': './data/georgia-12lead-ecg-challenge-database/Georgia',
+    'chapman-shaoxing-ningbo': './data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv',
+    # downstreaming datasets
+    'ptbxl': './data/ptbxl-electrocardiography-database/WFDB',
+    'cpsc2018': './data/china-physiological-signal-challenge-in-2018/Training_WFDB',
+}
 
 def get_parser():
     parser = argparse.ArgumentParser(description='Process to data to CSV file.')
@@ -35,6 +35,12 @@ def get_parser():
     args = vars(args)
     args['input_datasets'] = args['input_datasets'].split(',')
     return args
+
+def moving_window_crop(x: np.ndarray, crop_length: int, crop_stride: int) -> np.ndarray:
+    if crop_length > x.shape[1]:
+        raise ValueError(f"crop_length must be smaller than the length of x ({x.shape[1]}).")
+    start_idx = np.arange(0, x.shape[1] - crop_length + 1, crop_stride)
+    return [x[:, i:i + crop_length] for i in start_idx]
 
 def process(args):
     sample_paths = []

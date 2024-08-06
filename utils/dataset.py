@@ -1,4 +1,3 @@
-import re
 import pandas as pd
 
 import torch
@@ -23,7 +22,11 @@ class ECGDataset(Dataset):
         self.padder = p.PadSequence(target_len_sec=target_len_sec)
         self.resampler = p.Resample(target_len=target_len, target_fs=target_fs)
         self.preprocessor = preprocessor
-            
+
+    def check_dataset(self):
+        # fname_not_pkl = [f for f in self.filenames if not f.endswith('.pkl')]
+        pass
+    
     def __len__(self) -> int:
         return len(self.path_list)
 
@@ -40,7 +43,7 @@ class ECGDataset(Dataset):
         
         if self.label_list is not None:
             labels = self.label_list[idx]
-            return data, labels
+            return {'input_ecg': data, 'labels': labels, 'lead_indices': leads}
             
         return {'input_ecg': data, 'lead_indices': leads}
     
@@ -77,6 +80,10 @@ def build_dataset(cfg: dict, split: str) -> ECGDataset:
 
 # dataloader building
 def build_dataloader(dataset: ECGDataset, mode: str, **kwargs) -> DataLoader:
+    len_data = len(dataset)
+    batch_size = kwargs['batch_size']
+    if batch_size > len_data:
+        raise ValueError(f'Not enough data to create 1 batch. batch_size: [{batch_size}], data_size: [{len_data}]')
     is_train = mode == 'train'
     if is_train:
         sampler = torch.utils.data.RandomSampler(dataset)
