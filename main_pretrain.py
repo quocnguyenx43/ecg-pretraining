@@ -87,6 +87,7 @@ def main(config) -> None:
     
     # Training
     print(f"Start training for {total_epochs} epochs")
+    print(next(model.parameters()).device)
     if log_writer is not None:
         print('log_dir: {}'.format(log_writer.log_dir))
     print()
