@@ -82,7 +82,9 @@ def main(config) -> None:
     else:
         start_epoch = 0
         end_epoch = total_epochs
-        
+
+    loss_scaler = loss_scaler
+    
     # Training
     print(f"Start training for {total_epochs} epochs")
     if log_writer is not None:
@@ -96,24 +98,24 @@ def main(config) -> None:
             optimizer, loss_scaler,
             log_writer, config['train']
         )
-        
-        # # write log as txt file
-        # log_stats = {**{f'train_{k}': v for k, v in train_stats.items()}, 'epoch': epoch}
-        # if output_dir:
-        #     if log_writer is not None:
-        #         log_writer.flush()
-        #     with open(os.path.join(log_dir, 'log.txt'), 'a', encoding="utf-8") as file:
-        #         file.write(json.dumps(log_stats) + '\n')
 
-        # # save model
-        # if output_dir and (epoch % 20 == 0 or epoch == end_epoch - 1):
-        #     checkpoint_path = model_dir + f'checkpoint-{epoch}.pth'
-        #     m.save_model(
-        #         model, config, epoch, checkpoint_path,
-        #         optimizer, loss_scaler#, metrics,
-        #     )
+        # write log as txt file
+        log_stats = {**{f'train_{k}': v for k, v in train_stats.items()}, 'epoch': epoch}
+        if output_dir:
+            if log_writer is not None:
+                log_writer.flush()
+            with open(os.path.join(log_dir, 'log.txt'), 'a', encoding="utf-8") as file:
+                file.write(json.dumps(log_stats) + '\n')
+
+        # save model
+        if output_dir and (epoch % 20 == 0 or epoch == end_epoch - 1):
+            checkpoint_path = model_dir + f'checkpoint-{epoch}.pth'
+            m.save_model(
+                model, config, epoch, checkpoint_path,
+                optimizer, loss_scaler#, metrics,
+            )
         
-        # print()
+        print()
         
 
 if __name__ == '__main__':
