@@ -40,7 +40,6 @@ def main(config) -> None:
     print(yaml.dump(config, default_flow_style=False, sort_keys=False))
     device = torch.device(config['device'])
     f.setup_seed(config['seed'])
-    os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
     if config['output_dir']:
         output_dir = config['output_dir'] + config['exp_name'] + '/'
