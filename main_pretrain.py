@@ -82,9 +82,7 @@ def main(config) -> None:
     else:
         start_epoch = 0
         end_epoch = total_epochs
-
-    loss_scaler = loss_scaler
-    
+        
     # Training
     print(f"Start training for {total_epochs} epochs")
     if log_writer is not None:
