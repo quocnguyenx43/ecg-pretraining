@@ -15,7 +15,7 @@ def train_one_epoch_pretrain(
         log_writer=None, config=None,
     ):
     
-    model.to(device)
+    model = model.to(device)
     model.train()
     optimizer.zero_grad()
 
@@ -34,8 +34,6 @@ def train_one_epoch_pretrain(
         input_ecg = batch['input_ecg'].type(torch.FloatTensor).to(device, non_blocking=True)
         lead_indices = batch['lead_indices'].type(torch.IntTensor).to(device, non_blocking=True)
 
-        print(input_ecg.device)
-        print(lead_indices.device)
         with torch.cuda.amp.autocast():
             results = model(input_ecg, lead_indices)
             
