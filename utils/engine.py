@@ -33,7 +33,8 @@ def train_one_epoch_pretrain(
         input_ecg = batch['input_ecg'].type(torch.FloatTensor).to(device, non_blocking=True)
         lead_indices = batch['lead_indices'].type(torch.IntTensor).to(device, non_blocking=True)
 
-        results = model(input_ecg, lead_indices)
+        with torch.cuda.amp.autocast(device=device):
+            results = model(input_ecg, lead_indices)
             
         loss = results.get('loss').to(device, non_blocking=True)
         loss_value = loss.item()
