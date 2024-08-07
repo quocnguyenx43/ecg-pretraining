@@ -36,15 +36,19 @@ def train_one_epoch_pretrain(
         with torch.cuda.amp.autocast():
             results = model(input_ecg, lead_indices)
             
-        loss = results.get('loss').to(device, non_blocking=True)
+        loss = results.get('loss')
         loss_value = loss.item()
         if not math.isfinite(loss_value):
             print(f"Loss is {loss_value}, stopping training")
             sys.exit(1)
         loss = loss / accum_iter
 
-        is_updating_model = True
-        loss_scaler(loss, optimizer, parameters=model.parameters(), update_grad=is_updating_model)
+        is_updating_model = (step + 1) % accum_iter == 0
+        loss_scaler(
+            loss, optimizer,
+            parameters=model.parameters(),
+            update_grad=is_updating_model
+        )
         if is_updating_model:
             optimizer.zero_grad()
 
