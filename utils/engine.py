@@ -35,11 +35,14 @@ def train_one_epoch_pretrain(model: torch.nn.Module,
         # if data_iter_step % accum_iter == 0:
         #     adjust_learning_rate(optimizer, data_iter_step / len(data_loader) + epoch, config)
 
-        samples = samples.type(torch.FloatTensor)
-        samples = samples.to(device, non_blocking=True)
+        input_ecg = samples['input_ecg'].type(torch.FloatTensor)
+        lead_indices = samples['lead_indices'].type(torch.FloatTensor)
+
+        input_ecg = input_ecg.to(device, non_blocking=True)
+        lead_indices = lead_indices.to(device, non_blocking=True)
 
         with torch.cuda.amp.autocast():
-            results = model(samples['input_ecg'], samples['lead_indices'])
+            results = model(input_ecg, lead_indices)
         loss = results.get('loss')
         loss_value = loss.item()
 
