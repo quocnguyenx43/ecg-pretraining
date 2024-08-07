@@ -41,6 +41,8 @@ def main(config) -> None:
     device = torch.device(config['device'])
     f.setup_seed(config['seed'])
 
+    torch.backends.cudnn.benchmark = True
+
     if config['output_dir']:
         output_dir = config['output_dir'] + config['exp_name'] + '/'
         log_dir = output_dir + 'log/'
