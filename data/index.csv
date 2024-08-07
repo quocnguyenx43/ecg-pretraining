@@ -1,33 +1,149 @@
 path,fs,length,label
-./data/georgia-12lead-ecg-challenge-database/Georgia/E00001,500,5000,426783006
-./data/georgia-12lead-ecg-challenge-database/Georgia/E00004,500,5000,426783006
-./data/georgia-12lead-ecg-challenge-database/Georgia/E00002 - Copy,500,5000,426783006
-./data/georgia-12lead-ecg-challenge-database/Georgia/E00003 - Copy,500,5000,426783006
-./data/georgia-12lead-ecg-challenge-database/Georgia/E00002,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_83,500,5000,426783006
 ./data/georgia-12lead-ecg-challenge-database/Georgia/E00001 - Copy,500,5000,426783006
-./data/georgia-12lead-ecg-challenge-database/Georgia/E00003,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_49,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_19,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_25,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_32,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_50,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_66,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_33,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_8,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_78,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_99,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_20,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_52,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_22,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_79,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_76,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_55,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_98,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_23,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_36,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_12,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_35,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_28,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_29,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_81,500,5000,426783006
 ./data/georgia-12lead-ecg-challenge-database/Georgia/E00004 - Copy,500,5000,426783006
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00007 - Copy,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00010,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00011,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00008 - Copy,500,5000,"164889003,59118001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00009 - Copy,500,5000,"164889003,59118001,164934002"
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_4,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_72,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_87,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_56,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_70,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_24,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_53,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_94,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_74,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_41,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_91,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_58,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_13,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_80,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_27,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_21,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_68,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_64,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_9,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_88,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_65,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_75,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_85,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00002,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_100,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_14,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_18,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_61,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_30,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_54,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_92,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00003 - Copy,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_69,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_44,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_93,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_16,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_48,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_31,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_45,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_67,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_5,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_2,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_63,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_60,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_39,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_15,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_84,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_51,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_73,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_17,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_95,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_71,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_6,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_11,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00002 - Copy,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_40,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_89,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_34,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_82,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_26,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_7,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_1,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00004,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_96,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_47,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_46,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_86,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_42,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_59,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_97,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_37,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_90,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_62,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_10,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_38,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_77,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00003,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_3,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_43,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001_57,500,5000,426783006
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/HR00001,500,5000,"251146004,426783006"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/HR00004 - Copy,500,5000,"426177001,426783006"
 ./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00010 - Copy,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00008,500,5000,"164889003,59118001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00006,500,5000,"164889003,59118001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00007,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00005 - Copy,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00009,500,5000,"164889003,59118001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00005,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00001 - Copy,500,5000,"164889003,59118001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00003,500,5000,"164889003,59118001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00004,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00002,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00002 - Copy,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00001,500,5000,"164889003,59118001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00004 - Copy,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00012,500,5000,"426177001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00013,500,5000,"426177001,164934002"
 ./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00006 - Copy,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00008,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/A0002 - Copy,500,5000,426783006
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/HR00003 - Copy,500,5000,"251146004,426783006"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00004,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00001 - Copy,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00002,500,5000,"426177001,164934002"
 ./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00013 - Copy,500,5000,"426177001,164934002"
 ./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00003 - Copy,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00013,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/A0003,500,7500,59118001
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/HR00002,500,5000,"426177001,426783006"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/HR00004,500,5000,"426177001,426783006"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00012,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/HR00002 - Copy,500,5000,"426177001,426783006"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/A0002,500,5000,426783006
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/HR00001 - Copy,500,5000,"251146004,426783006"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00002 - Copy,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00007 - Copy,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00011,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/HR00003,500,5000,"251146004,426783006"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00010,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00008 - Copy,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/A0004,500,5000,426783006
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/A0004 - Copy,500,5000,426783006
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/A0003 - Copy,500,7500,59118001
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00005,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00006,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/A0001,500,7500,59118001
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/A0001 - Copy,500,7500,59118001
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00005 - Copy,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00007,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00003,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00001,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00009 - Copy,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00009,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00004 - Copy,500,5000,"426177001,164934002"
