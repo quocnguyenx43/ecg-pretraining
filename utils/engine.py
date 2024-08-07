@@ -18,8 +18,6 @@ def train_one_epoch_pretrain(
     model.train()
     optimizer.zero_grad()
 
-    print(model.device)
-
     metric_logger = m.MetricLogger(delimiter="  ")
     metric_logger.add_meter('lr', m.SmoothedValue(window_size=1, fmt='{value:.6f}'))
     print_header = 'Epoch: [{}]'.format(epoch)
