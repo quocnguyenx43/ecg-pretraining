@@ -1,9 +1,33 @@
 path,fs,length,label
 ./data/georgia-12lead-ecg-challenge-database/Georgia/E00001,500,5000,426783006
-./data/georgia-12lead-ecg-challenge-database/Georgia/E00002,500,5000,426783006
-./data/georgia-12lead-ecg-challenge-database/Georgia/E00003,500,5000,426783006
 ./data/georgia-12lead-ecg-challenge-database/Georgia/E00004,500,5000,426783006
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00004,500,5000,"426177001,164934002"
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00002 - Copy,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00003 - Copy,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00002,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00001 - Copy,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00003,500,5000,426783006
+./data/georgia-12lead-ecg-challenge-database/Georgia/E00004 - Copy,500,5000,426783006
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00007 - Copy,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00010,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00011,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00008 - Copy,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00009 - Copy,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00010 - Copy,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00008,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00006,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00007,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00005 - Copy,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00009,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00005,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00001 - Copy,500,5000,"164889003,59118001,164934002"
 ./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00003,500,5000,"164889003,59118001,164934002"
-./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00001,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00004,500,5000,"426177001,164934002"
 ./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00002,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00002 - Copy,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00001,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00004 - Copy,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00012,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00013,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00006 - Copy,500,5000,"164889003,59118001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00013 - Copy,500,5000,"426177001,164934002"
+./data/shaoxing-and-ningbo-first-hospital-database/WFDB_ShaoxingUniv/JS00003 - Copy,500,5000,"164889003,59118001,164934002"

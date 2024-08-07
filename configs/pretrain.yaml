@@ -36,12 +36,12 @@ dataset:
       axis: [-1, -2]
 
 dataloader:
-  batch_size: 4
+  batch_size: 12
   num_workers: 8
   pin_memory: True
 
 train:
-  total_epochs: 10
+  total_epochs: 20
   accum_iter: 1
   warmup_epochs: 3
   min_lr: 0
