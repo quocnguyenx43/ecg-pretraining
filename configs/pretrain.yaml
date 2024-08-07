@@ -1,6 +1,6 @@
 seed: 42
 output_dir: ./outputs/
-exp_name: pretrain_1
+exp_name: pretrain
 resume: null # provide a checkpoint path
 device: cuda
 
@@ -12,7 +12,7 @@ model:
   norm_pix_loss: true
 
 dataset:
-  train_csv: ./data/index.csv
+  train_csv: ./data/pretraining_index.csv
   
   # cols
   path_col: path

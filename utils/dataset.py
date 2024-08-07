@@ -35,17 +35,17 @@ class ECGDataset(Dataset):
         data = data[self.lead_indices]
 
         fs = self.fs_list[idx]
-        data = self.padder(data, fs)
-        data = self.resampler(data, fs)
-        data = self.preprocessor(data)
+        # data = self.padder(data, fs)
+        # data = self.resampler(data, fs)
+        # data = self.preprocessor(data)
 
         leads = self.lead_indices
         
         if self.label_list is not None:
             labels = self.label_list[idx]
-            return {'input_ecg': data, 'labels': labels, 'lead_indices': leads}
+            return {'input_ecg': data[:, :2250], 'labels': labels, 'lead_indices': leads}
             
-        return {'input_ecg': data, 'lead_indices': leads}
+        return {'input_ecg': data[:, :2250], 'lead_indices': leads}
     
 # train, dev, test dataset building
 def build_dataset(cfg: dict, split: str) -> ECGDataset:
