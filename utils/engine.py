@@ -18,6 +18,8 @@ def train_one_epoch_pretrain(
     model.train()
     optimizer.zero_grad()
 
+    print(model.device)
+
     metric_logger = m.MetricLogger(delimiter="  ")
     metric_logger.add_meter('lr', m.SmoothedValue(window_size=1, fmt='{value:.6f}'))
     print_header = 'Epoch: [{}]'.format(epoch)
@@ -33,7 +35,8 @@ def train_one_epoch_pretrain(
         input_ecg = batch['input_ecg'].type(torch.FloatTensor).to(device, non_blocking=True)
         lead_indices = batch['lead_indices'].type(torch.IntTensor).to(device, non_blocking=True)
 
-        print(next(model.parameters()).device)
+        print(input_ecg.device)
+        print(lead_indices.device)
         with torch.cuda.amp.autocast():
             results = model(input_ecg, lead_indices)
             
