@@ -43,7 +43,7 @@ def train_one_epoch_pretrain(model: torch.nn.Module,
 
         with torch.cuda.amp.autocast():
             results = model(input_ecg, lead_indices)
-        loss = results.get('loss')
+        loss = results.get('loss').to(device, non_blocking=True)
         loss_value = loss.item()
 
         if not math.isfinite(loss_value):
