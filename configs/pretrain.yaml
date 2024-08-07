@@ -36,8 +36,8 @@ dataset:
       axis: [-1, -2]
 
 dataloader:
-  batch_size: 64
-  num_workers: 4
+  batch_size: 16
+  num_workers: 8
   pin_memory: True
 
 train:
