@@ -30,6 +30,8 @@ def train_one_epoch_pretrain(
         if step % accum_iter == 0:
             adjust_learning_rate(optimizer, step / len(data_loader) + epoch, end_epoch, config)
 
+        optimizer.zero_grad()
+
         input_ecg = batch['input_ecg'].type(torch.FloatTensor).to(device, non_blocking=True)
         lead_indices = batch['lead_indices'].type(torch.IntTensor).to(device, non_blocking=True)
         
@@ -41,26 +43,29 @@ def train_one_epoch_pretrain(
         if not math.isfinite(loss_value):
             print(f"Loss is {loss_value}, stopping training")
             sys.exit(1)
-        loss = loss / accum_iter
+        # loss = loss / accum_iter
 
-        is_updating_model = (step + 1) % accum_iter == 0
-        loss_scaler(
-            loss, optimizer,
-            parameters=model.parameters(),
-            update_grad=is_updating_model
-        )
-        if is_updating_model:
-            optimizer.zero_grad()
+        # is_updating_model = (step + 1) % accum_iter == 0
+        # loss_scaler(
+        #     loss, optimizer,
+        #     parameters=model.parameters(),
+        #     update_grad=is_updating_model
+        # )
+        # if is_updating_model:
+        #     optimizer.zero_grad()
+
+        loss.backward()
+        optimizer.step()
 
         lr = optimizer.param_groups[0]['lr']
         metric_logger.update(loss=loss_value)
         metric_logger.update(lr=lr)
         
-        if log_writer is not None and is_updating_model:
-            # 1000 is the x-axis
-            epoch_1000x = int((epoch + step / len(data_loader)) * 1000)
-            log_writer.add_scalar('pretrain_loss', loss_value, epoch_1000x)
-            log_writer.add_scalar('lr', lr, epoch_1000x)
+    #     if log_writer is not None and is_updating_model:
+    #         # 1000 is the x-axis
+    #         epoch_1000x = int((epoch + step / len(data_loader)) * 1000)
+    #         log_writer.add_scalar('pretrain_loss', loss_value, epoch_1000x)
+    #         log_writer.add_scalar('lr', lr, epoch_1000x)
 
-    print('Averaged stats:', metric_logger)
-    return {k: meter.global_avg for k, meter in metric_logger.meters.items()}
+    # print('Averaged stats:', metric_logger)
+    # return {k: meter.global_avg for k, meter in metric_logger.meters.items()}
