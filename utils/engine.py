@@ -36,7 +36,7 @@ def train_one_epoch_pretrain(model: torch.nn.Module,
         #     adjust_learning_rate(optimizer, data_iter_step / len(data_loader) + epoch, config)
 
         input_ecg = samples['input_ecg'].type(torch.FloatTensor)
-        lead_indices = samples['lead_indices'].type(torch.FloatTensor)
+        lead_indices = samples['lead_indices'].type(torch.IntTensor)
 
         input_ecg = input_ecg.to(device, non_blocking=True)
         lead_indices = lead_indices.to(device, non_blocking=True)
