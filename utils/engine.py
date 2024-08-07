@@ -15,6 +15,7 @@ def train_one_epoch_pretrain(
         log_writer=None, config=None,
     ):
     
+    model.to(device)
     model.train()
     optimizer.zero_grad()
 
