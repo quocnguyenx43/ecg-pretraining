@@ -12,7 +12,7 @@ model:
   norm_pix_loss: true
 
 dataset:
-  train_csv: ./data/pretraining_index.csv
+  train_csv: ./data/index.csv
   
   # cols
   path_col: path
