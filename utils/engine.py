@@ -44,7 +44,7 @@ def train_one_epoch_pretrain(
             sys.exit(1)
         loss = loss / accum_iter
 
-        is_updating_model = (step + 1) % accum_iter == 0
+        is_updating_model = True
         loss_scaler(loss, optimizer, parameters=model.parameters(), update_grad=is_updating_model)
         if is_updating_model:
             optimizer.zero_grad()
