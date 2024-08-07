@@ -2,7 +2,7 @@ seed: 42
 output_dir: ./outputs/
 exp_name: pretrain_1
 resume: null # provide a checkpoint path
-device: cuda
+device: cpu
 
 model:
   seq_len: 2250
