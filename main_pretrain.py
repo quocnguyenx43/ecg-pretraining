@@ -93,10 +93,12 @@ def main(config) -> None:
     for epoch in range(start_epoch, end_epoch):
         # train 1 epoch
         train_stats = train_one_epoch_pretrain(
-            model, train_dataloader, optimizer, device, epoch,loss_scaler,
+            model, train_dataloader,
+            epoch, end_epoch, device,
+            optimizer, loss_scaler,
             log_writer, config['train']
         )
-
+        
         # # write log as txt file
         # log_stats = {**{f'train_{k}': v for k, v in train_stats.items()}, 'epoch': epoch}
         # if output_dir:
