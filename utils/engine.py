@@ -30,11 +30,8 @@ def train_one_epoch_pretrain(
         if step % accum_iter == 0:
             adjust_learning_rate(optimizer, step / len(data_loader) + epoch, end_epoch, config)
 
-        input_ecg = batch['input_ecg'].type(torch.FloatTensor)
-        lead_indices = batch['lead_indices'].type(torch.IntTensor)
-        
-        input_ecg = input_ecg.to(device, non_blocking=True)
-        lead_indices = lead_indices.to(device, non_blocking=True)
+        input_ecg = batch['input_ecg'].type(torch.FloatTensor).to(device, non_blocking=True)
+        lead_indices = batch['lead_indices'].type(torch.IntTensor).to(device, non_blocking=True)
 
         results = model(input_ecg, lead_indices)
             

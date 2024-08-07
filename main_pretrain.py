@@ -39,8 +39,6 @@ def main(config) -> None:
     # Configs
     print(yaml.dump(config, default_flow_style=False, sort_keys=False))
     device = torch.device(config['device'])
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
     f.setup_seed(config['seed'])
 
     if config['output_dir']:
