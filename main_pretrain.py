@@ -93,29 +93,27 @@ def main(config) -> None:
     for epoch in range(start_epoch, end_epoch):
         # train 1 epoch
         train_stats = train_one_epoch_pretrain(
-            model, train_dataloader,
-            epoch, end_epoch, device,
-            optimizer, loss_scaler,
+            model, train_dataloader, optimizer, device, epoch,loss_scaler,
             log_writer, config['train']
         )
 
-        # write log as txt file
-        log_stats = {**{f'train_{k}': v for k, v in train_stats.items()}, 'epoch': epoch}
-        if output_dir:
-            if log_writer is not None:
-                log_writer.flush()
-            with open(os.path.join(log_dir, 'log.txt'), 'a', encoding="utf-8") as file:
-                file.write(json.dumps(log_stats) + '\n')
+        # # write log as txt file
+        # log_stats = {**{f'train_{k}': v for k, v in train_stats.items()}, 'epoch': epoch}
+        # if output_dir:
+        #     if log_writer is not None:
+        #         log_writer.flush()
+        #     with open(os.path.join(log_dir, 'log.txt'), 'a', encoding="utf-8") as file:
+        #         file.write(json.dumps(log_stats) + '\n')
 
-        # save model
-        if output_dir and (epoch % 20 == 0 or epoch == end_epoch - 1):
-            checkpoint_path = model_dir + f'checkpoint-{epoch}.pth'
-            m.save_model(
-                model, config, epoch, checkpoint_path,
-                optimizer, loss_scaler#, metrics,
-            )
+        # # save model
+        # if output_dir and (epoch % 20 == 0 or epoch == end_epoch - 1):
+        #     checkpoint_path = model_dir + f'checkpoint-{epoch}.pth'
+        #     m.save_model(
+        #         model, config, epoch, checkpoint_path,
+        #         optimizer, loss_scaler#, metrics,
+        #     )
         
-        print()
+        # print()
         
 
 if __name__ == '__main__':

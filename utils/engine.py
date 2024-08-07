@@ -8,7 +8,7 @@ from utils import misc as m
 from utils.lr_schedule import adjust_learning_rate
 
 
-def train_one_epoch(model: torch.nn.Module,
+def train_one_epoch_pretrain(model: torch.nn.Module,
                     data_loader: Iterable,
                     optimizer: torch.optim.Optimizer,
                     device: torch.device,
